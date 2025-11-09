@@ -59,7 +59,3 @@ pytest_cache/
 # local env files
 .env
 secrets.env
-
-# model or data artifacts
-/model/*.pkl
-/model/*.joblib
