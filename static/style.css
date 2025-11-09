@@ -1,0 +1,172 @@
+ /* ============================= */
+/* 🌊 GLOBAL BACKGROUND & FONT */
+/* ============================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  background: 
+    linear-gradient(120deg, rgba(248, 225, 244, 0.6), rgba(227, 240, 255, 0.6), rgba(249, 224, 224, 0.6)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80')
+    no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  animation: backgroundFlow 40s ease infinite alternate;
+}
+
+/* Smooth animated background movement */
+@keyframes backgroundFlow {
+  0% { background-position: center top; filter: brightness(1); }
+  50% { background-position: center bottom; filter: brightness(1.05); }
+  100% { background-position: center top; filter: brightness(1); }
+}
+
+/* ============================= */
+/* 🪶 FLOATING EFFECTS */
+/* ============================= */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ============================= */
+/* 💫 CARD DESIGN */
+/* ============================= */
+.card {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 700px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.breath-visual {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breath-visual img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  opacity: 0.2;
+}
+
+.breath-visual .visual-inhale {
+  opacity: 0.45;
+}
+
+.breath-visual.playing .visual-inhale {
+  animation: inhalePulse 6s ease-in-out infinite;
+}
+
+.breath-visual.playing .visual-exhale {
+  animation: exhalePulse 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@keyframes inhalePulse {
+  0% { transform: scale(0.85); opacity: 0.35; }
+  40% { transform: scale(1.05); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(0.85); opacity: 0.35; }
+}
+
+@keyframes exhalePulse {
+  0% { transform: scale(1.05); opacity: 0.85; }
+  40% { transform: scale(0.8); opacity: 0.25; }
+  100% { transform: scale(0.95); opacity: 0.75; }
+}
+
+.breath-toggle {
+  position: absolute;
+  bottom: -18px;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #8a7cf7, #ff8da1);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 22px rgba(189, 137, 255, 0.25);
+}
+
+.breath-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(189, 137, 255, 0.35);
+}
+
+#breathing-steps li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+#breathing-steps li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #9678f7;
+}
+
+#breathing-steps li.active-step {
+  color: #7c5bff;
+  transform: translateX(4px);
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 45px rgba(31, 38, 135, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================= */
+/* 🌈 GRADIENT ANIMATION LAYER */
+/* ============================= */
+.gradient-layer {
+  background: linear-gradient(120deg, #f8e1f4, #e3f0ff, #f9e0e0, #e3f8f1);
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* ✨ FADE & TRANSITION UTILS */
+/* ============================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}

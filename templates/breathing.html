@@ -1,0 +1,41 @@
+<div class="card center">
+  <h2>Breathing Exercise</h2>
+  <div class="circle" id="breathing-circle"></div>
+  <p id="breathing-text">Inhale...</p>
+</div>
+
+<script>
+let phase = 0;
+const circle = document.getElementById('breathing-circle');
+const text = document.getElementById('breathing-text');
+const phases = ["Inhale...", "Hold...", "Exhale...", "Hold..."];
+const durations = [4000, 4000, 6000, 4000];
+
+function cycle() {
+  text.textContent = phases[phase];
+  circle.style.transform = phase % 2 === 0 ? "scale(1.2)" : "scale(0.8)";
+  setTimeout(() => {
+    phase = (phase + 1) % phases.length;
+    cycle();
+  }, durations[phase]);
+}
+cycle();
+</script>
+
+<style>
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #b7e4f9, #6fb1fc);
+  border-radius: 50%;
+  margin: 20px;
+  transition: transform 4s ease-in-out;
+}
+</style>

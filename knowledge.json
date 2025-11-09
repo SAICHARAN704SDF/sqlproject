@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding Anxiety",
+    "category": "Anxiety",
+    "content": "Anxiety is a natural response to perceived threat or uncertainty. It often shows as a racing mind, muscle tension, and heightened alertness. Short-term anxiety can protect us, but chronic anxiety becomes tiring and can interfere with sleep, concentration, and daily life.",
+    "how_it_comes": "Anxiety develops from a mix of genetic predisposition, past experiences, learned worry patterns, and current stressors like work, relationships, or health worries. When the brain interprets situations as risky, the body’s stress system activates a fight-or-flight response.",
+    "how_it_goes": "Anxiety eases when triggers reduce, when the nervous system is regulated through breathing, movement, or grounding, and when cognitive patterns are challenged through therapy or mindful practices. Regular routines and social support also reduce chronic anxiety.",
+    "image": "static/images/anxiety.png"
+  },
+  {
+    "id": 2,
+    "title": "What is Burnout?",
+    "category": "Burnout",
+    "content": "Burnout is prolonged emotional exhaustion and reduced motivation often caused by long-term workplace or caregiving stress. People may feel detached, cynical, or less effective in tasks that once mattered.",
+    "how_it_comes": "Burnout builds gradually when workload, unclear expectations, or lack of rest become persistent. Personal perfectionism and lack of boundaries accelerate the process.",
+    "how_it_goes": "Recovery requires rest, boundary-setting, workload changes, and sometimes professional support. Micro-rests, delegating, and reconnecting with meaningful activities help restore energy.",
+    "image": "static/images/burnout.png"
+  },
+  {
+    "id": 3,
+    "title": "Overthinking & Rumination",
+    "category": "Overthinking",
+    "content": "Rumination is repeatedly going over worries or negative memories. It feels like a loop that keeps the mind active and prevents restful problem-solving.",
+    "how_it_comes": "It starts as an attempt to solve a problem, but cognitive habits and stress make the brain loop on the same thoughts. Fatigue, uncertainty, and perfectionism intensify rumination.",
+    "how_it_goes": "Interrupting the loop with grounding, naming the thought, scheduled worry time, or shifting to action-oriented steps reduces rumination over time.",
+    "image": "static/images/overthinking.png"
+  },
+  {
+    "id": 4,
+    "title": "Stress from Work or Study",
+    "category": "Work/Academic",
+    "content": "Work or academic stress arises from deadlines, unclear expectations, high workload, and performance pressure. It can affect sleep, concentration, and mood.",
+    "how_it_comes": "Often caused by a mismatch between demands and resources—too much to do, too little time, or insufficient support. Perfectionism and fear of failure also drive work stress.",
+    "how_it_goes": "Addressing priorities, time-blocking, realistic goal-setting, and taking restorative breaks helps. Communicating needs and adjusting expectations are key to reducing chronic work stress.",
+    "image": "static/images/work_stress.png"
+  },
+  {
+    "id": 5,
+    "title": "Depressive Feelings",
+    "category": "Depression",
+    "content": "Depressive feelings include low mood, loss of interest, reduced energy, and slowed thinking. These feelings range from temporary sadness to clinical depression.",
+    "how_it_comes": "They can arise from life losses, ongoing stress, biological vulnerability, or disrupted routines. Isolation and poor sleep worsen low mood.",
+    "how_it_goes": "Small activities, routine, social contact, and professional therapy are effective. Building gentle structure and small achievable goals helps recovery.",
+    "image": "static/images/depression.png"
+  },
+  {
+    "id": 6,
+    "title": "Sleep Difficulties and Stress",
+    "category": "sleep",
+    "content": "Stress often disrupts sleep by racing thoughts or physiological arousal. Poor sleep, in turn, increases stress sensitivity creating a cycle.",
+    "how_it_comes": "Stressful days, caffeine, screen use near bedtime, and irregular schedules lead to insomnia or fragmented sleep.",
+    "how_it_goes": "Improving sleep hygiene, consistent schedules, winding down rituals, and addressing worries earlier in the day help restore healthy sleep patterns.",
+    "image": "static/images/sleep.png"
+  },
+  {
+    "id": 7,
+    "title": "Relationship Stress",
+    "category": "Relationship",
+    "content": "Relationship stress stems from miscommunication, unmet needs, or conflicts. It can affect self-esteem, mood, and daily functioning.",
+    "how_it_comes": "Unresolved patterns, differing expectations, or stressful external events can strain relationships. Avoidance and reactive responses fuel the cycle.",
+    "how_it_goes": "Clear communication, empathy, and setting boundaries help. When safety is a concern, prioritize support and professional help.",
+    "image": "static/images/relationship.png"
+  },
+  {
+    "id": 8,
+    "title": "Trauma and Stress Responses",
+    "category": "Trauma",
+    "content": "Trauma can sensitize the nervous system, leading to hypervigilance, flashbacks, or emotional numbing. Trauma responses are normal reactions to abnormal events.",
+    "how_it_comes": "Exposure to threat, violence, or overwhelming events can alter stress regulation systems and memory processing.",
+    "how_it_goes": "Healing often involves safety, stabilization, and therapeutic work. Grounding, predictable routines, and trauma-informed therapy are effective routes to recovery.",
+    "image": "static/images/trauma.png"
+  },
+  {
+    "id": 9,
+    "title": "Perfectionism & Pressure",
+    "category": "Pressure",
+    "content": "Perfectionism creates chronic pressure and fear of mistakes. It looks like setting unrealistically high standards and self-criticism when those standards aren’t met.",
+    "how_it_comes": "Cultural, familial, or internal beliefs about worth tied to achievement fuel perfectionism.",
+    "how_it_goes": "Practicing self-compassion, realistic goal-setting, and reframing mistakes as learning helps reduce perfectionist pressure.",
+    "image": "static/images/perfectionism.png"
+  },
+  {
+    "id": 10,
+    "title": "Coping Skills & Self-Care",
+    "category": "Coping",
+    "content": "Healthy coping includes regular sleep, movement, social support, breathing, and mental skills such as reframing and problem solving.",
+    "how_it_comes": "Coping improves when daily routines, boundaries, and self-care practices are established; it often requires practice and small consistent changes.",
+    "how_it_goes": "With repeated practice, coping strategies become automatic and reduce the intensity and duration of stress responses.",
+    "image": "static/images/coping.png"
+  },
+  {
+    "id": 11,
+    "title": "When to Seek Help",
+    "category": "Support",
+    "content": "Persistent, severe, or worsening symptoms—especially if they impair daily life or involve thoughts of harming yourself—warrant professional support.",
+    "how_it_comes": "Many people delay help due to stigma or hope it will pass; however, early support often prevents worsening.",
+    "how_it_goes": "Therapy, medication when appropriate, peer support, and coordinated care help most people regain balance and function.",
+    "image": "static/images/support.png"
+  },
+  {
+    "id": 12,
+    "title": "Mindful Distraction & Flow",
+    "category": "Coping",
+    "content": "Flow and mindful distraction are healthy ways to break rumination: engaging fully in a creative or physical task can reset attention and mood.",
+    "how_it_comes": "Activities that match skill and challenge (e.g., art, sport, focused work) produce flow and reduce self-focused worry.",
+    "how_it_goes": "Regularly practicing activities that produce flow builds resilience and offers a natural buffer against stress.",
+    "image": "static/images/flow.png"
+  }
+]

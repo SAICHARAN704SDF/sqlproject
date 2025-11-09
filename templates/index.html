@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EscapeStress 💫</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.svg') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-bg"></div>
+
+    <main class="layout">
+      <aside class="sidebar" aria-hidden="false">
+        <button class="side-btn" data-panel="breathing" title="Breathing">🧘<span>Breathing</span></button>
+        <button class="side-btn" data-panel="journaling" title="Journaling">📝<span>Journaling</span></button>
+        <button class="side-btn" data-panel="music" title="Mind music">🎧<span>Music</span></button>
+        <button class="side-btn active" data-panel="chat" title="Chat">💬<span>Chat</span></button>
+        <button class="side-btn" data-panel="learn" title="Learn">📚<span>Learn</span></button>
+        <div class="profile-area">
+          <small>Welcome</small>
+          <button id="profile-open" class="profile-btn">Set profile</button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <section class="left-col">
+          <header class="header">
+            <img src="{{ url_for('static', filename='logo.svg') }}" alt="EscapeStress" class="logo">
+            <div>
+              <h1 class="title">EscapeStress</h1>
+              <p class="tag">A calm companion for mental wellness</p>
+            </div>
+          </header>
+
+          <div class="panel" id="breathing" style="display:none">
+            <div class="card glass">
+              <h3>Breathing</h3>
+              <div class="breath-visual" id="breath-visual">
+                <img src="{{ url_for('static', filename='inhale.svg') }}" alt="Inhale visual" class="visual-inhale">
+                <img src="{{ url_for('static', filename='exhale.svg') }}" alt="Exhale visual" class="visual-exhale">
+                <button id="breath-toggle" class="breath-toggle" type="button">Play</button>
+              </div>
+              <div id="lottieBreath" class="lottie" aria-hidden="true"></div>
+              <p class="muted">Tap play to watch the inhale/exhale rhythm, then match your breathing to the animation.</p>
+              <ol id="breathing-steps"></ol>
+            </div>
+          </div>
+
+          <div class="panel" id="journaling" style="display:none">
+            <div class="card glass">
+              <h3>Journaling prompt</h3>
+              <p>Try this prompt: What is one small thing I can do today to feel less heavy?</p>
+              <textarea id="journal-text" rows="6" placeholder="Write a short reflection..."></textarea>
+              <div class="row"><button id="save-journal">Save</button><span id="journal-saved" class="muted"></span></div>
+            </div>
+          </div>
+
+          <div class="panel" id="music" style="display:none">
+            <div class="card glass">
+              <h3>Mind music</h3>
+              <p class="muted">Soft ambient tracks to help you focus or relax.</p>
+              <ul>
+                <li><a href="#">Calm waves (2 min)</a></li>
+                <li><a href="#">Gentle piano (8 min)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel" id="chat">
+            <div class="card chat-card">
+              <div id="chat-box" class="chat-box" aria-live="polite"></div>
+              <div class="input-row">
+                <input id="user-input" placeholder="How are you feeling today?" autocomplete="off">
+                <button id="send-btn">Send</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="learn" style="display:none">
+            <div class="card glass">
+              <h3>Understanding Stress & Emotional Wellness</h3>
+              <p class="muted">Below are concise professional entries about different stress types, causes, and evidence-based coping approaches. Read any entry for practical guidance and reflective prompts.</p>
+
+              <section class="learn-entry">
+                <h4>1. Acute Stress</h4>
+                <p>Acute stress is a short-term response to an immediate perceived threat or demand (e.g., a deadline, an argument, an unexpected event). It activates the sympathetic nervous system causing increased heart rate, sharpened focus, and rapid breathing. Acute stress often resolves quickly once the triggering event passes. Useful coping strategies include grounding exercises, short focused breathing, and a brief walk to restore physiological balance.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>2. Chronic Stress</h4>
+                <p>Chronic stress results from ongoing pressures such as prolonged work overload, caregiving responsibilities, financial strain, or unresolved relationship tension. Over time, sustained cortisol elevation can impair sleep, concentration, and immune function, and increase risk for mood disturbances. Managing chronic stress usually requires structural changes: boundary setting, workload adjustment, social support, and consistent self-care routines.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>3. Burnout</h4>
+                <p>Burnout is a state of emotional exhaustion, cynicism, and reduced effectiveness often tied to persistent workplace or academic stress without adequate recovery. Key signs include persistent fatigue, decreased motivation, and detachment. Recovery focuses on rest, recalibrating expectations, re-establishing boundaries, and seeking supportive supervision or counseling.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>4. Anxiety Disorders vs. Normal Worry</h4>
+                <p>Worry is a normal response to uncertainty, but when worry is excessive, persistent, and interferes with daily life it may reflect an anxiety disorder. Physiological symptoms (palpitations, tremor), avoidance patterns, and functional impairment are key differentiators. Short-term strategies include breathing and cognitive reframing; persistent symptoms benefit from therapy and structured interventions.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>5. Depression & Low Mood</h4>
+                <p>Depression involves persistent low mood, loss of interest, and cognitive slowing. It may arise from biological vulnerability, prolonged stress, loss, or social isolation. Early steps include behavioral activation (small, achievable activities), social connection, and professional assessment if symptoms persist or include self-harm thoughts.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>6. Panic & Panic Attacks</h4>
+                <p>Panic attacks are sudden surges of intense fear with physical symptoms (shortness of breath, chest tightness, dizziness). They are frightening but self-limiting. Grounding, paced breathing, and reminding oneself that the attack will peak and pass are practical first-line responses; repeated attacks should prompt professional evaluation for panic disorder.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>7. Sleep & Stress</h4>
+                <p>Stress strongly disrupts sleep through cognitive arousal and circadian interference. Poor sleep increases vulnerability to negative emotion and impaired cognitive control. Sleep hygiene (regular schedule, screen curfew), brief wind-down routines, and light exposure consistency are evidence-based strategies to restore restorative sleep.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>8. Overthinking & Rumination</h4>
+                <p>Rumination is repetitive, passive focus on distress and its causes. It maintains negative mood and prevents problem-solving. Interrupting rumination with concrete problem-solving steps, brief mindfulness practices, or scheduling a limited “worry time” can reduce its grip.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>9. Emotional Regulation Skills</h4>
+                <p>Skills such as labeling emotions, breathing regulation, progressive muscle relaxation, and paced reappraisal help manage intensity. Practicing these skills when calm increases their accessibility during distress.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>10. Social Support & Communication</h4>
+                <p>Strong relationships buffer stress. Clear, vulnerable communication ("I feel... when...") helps others respond supportively. If trusted connections are sparse, consider peer support groups or counseling to build reliable support scaffolding.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>11. Cognitive Patterns & Reframing</h4>
+                <p>Automatic negative thoughts can bias perception. Cognitive techniques involve identifying unhelpful thoughts, testing evidence, and generating balanced alternatives. This reduces exaggerated threat appraisals and supports calmer decision-making.</p>
+              </section>
+
+              <section class="learn-entry">
+                <h4>12. When to Seek Professional Help</h4>
+                <p>If stress consistently impairs daily functioning, sleep, relationships, or leads to thoughts of harming oneself, professional assessment is important. Therapy, medication when indicated, and crisis supports are evidence-based tools. Reaching out early often shortens recovery time.</p>
+              </section>
+
+            </div>
+          </div>
+
+          <footer class="footer">Built with care • If you’re in crisis, contact local emergency services</footer>
+        </section>
+
+        <aside class="info-panel">
+          <h3>Today’s Check-in</h3>
+          <div id="analysis" class="analysis">
+            <p class="hint">Send a message and I’ll listen — then offer tips and a short coping exercise.</p>
+          </div>
+          <div class="resources">
+            <h4>Quick Resources</h4>
+            <ul id="resource-list"></ul>
+          </div>
+          <div class="learn">
+            <h4>Learn about stress</h4>
+            <div id="learn-list"></div>
+          </div>
+        </aside>
+      </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
